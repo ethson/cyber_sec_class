@@ -38,7 +38,7 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-<YOUR PUBLIC IP>
+**_YOUR PUBLIC IP_**
 
 Machines within the network can only be accessed by Jump Box machine, 10.0.1.4.
 
@@ -46,10 +46,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | <PUBLIC IP>, Jump Box|
+| Jump Box | Yes                 | PUBLIC IP, Jump Box  |
 | DVWA     | No                  | Jump Box, ELK, LB    |
-| LB       | Yes                 | <PUBLIC IP>          |
-| ELK      | Yes                 | <PUBLIC IP>, Jump Box|
+| LB       | Yes                 | PUBLIC IP            |
+| ELK      | Yes                 | PUBLIC IP, Jump Box  |
 
 ### Elk Configuration
 
@@ -81,5 +81,5 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node (Jump Box) and follow the steps below:
 - Copy the (Ansible/elk.yml) file to /etc/ansible/roles/
 - Update the hosts file to include the elkservers
-- Run the playbook, and navigate to <ELK PUBLIC IP>:5601 to check that the installation worked as expected.
+- Run the playbook, and navigate to **_ELK PUBLIC IP_**:5601 to check that the installation worked as expected.
 
